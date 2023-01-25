@@ -1,51 +1,103 @@
 import React from 'react';
-import { StyleSheet, View, Text, StatusBar, Image } from 'react-native';
+import { StyleSheet, View, Text, StatusBar, Image, SafeAreaViewComponent ,Button ,TouchableOpacity} from 'react-native';
+
 
 export default function Home ({navigation}) {
     return(
-        <View style={styles.container}>
-            <Image source={require('./assets/home-banner.png')} style={styles.bannerImage}></Image>
-            <View style={styles.content}>
-                <Text style={styles.mainText}>Open up Home.js to start working!</Text>
-                <Text style={styles.helpText}>All the libraries and assets required are available in the app directory.</Text>
-                <Text style={styles.hintText}>Hint: Make use of stack navigation in App.js to navigate between screens!</Text>
+        <View style = {styles.main_view}>
+          <View>
+            <Text style = {styles.hintText}>Get the Worlds First Non - custodial cypher card
+            </Text>
+
+          </View>
+          <View>
+            <Text style = {styles.sub_view}>
+              Explore all of Web3 in one place
+            </Text>
+            <View >
+              <View style = {styles.options}>
+                <Image source={require('./assets/swap.png')} style = {styles.image_icon}>
+                  
+                </Image>
+                <Text >Swap to get instant USD</Text>
+              </View>
+              <View style = {styles.options}>
+                <Image source={require('./assets/buy.png')} style = {styles.image_icon}>
+                  
+                </Image>
+                <Text >Swap to get instant USD</Text>
+              </View>
+              <View style = {styles.options}>
+                <Image source={require('./assets/chain.png')} style = {styles.image_icon}>
+                  
+                </Image>
+                <Text >Swap to get instant USD</Text>
+              </View>
+              <View style = {styles.options}>
+                <Image source={require('./assets/browser.png')} style = {styles.image_icon}>
+                  
+                </Image>
+                <Text >Swap to get instant USD</Text>
+              </View>
             </View>
-            <StatusBar style="auto" />
+
+          </View>
+          <View>
+            
+              <TouchableOpacity style={styles.button1} onPress={() =>  navigation.navigate('Details')}>
+                <Text style={styles.buttonText}>CREATE NEW WALLET</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={styles.button2}>
+                <Text style={styles.buttonText}>IMPORT EXISTING WALLET</Text>
+              </TouchableOpacity>
+          </View>
+          
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      flexDirection: 'column',
-      backgroundColor: '#fff',
-      alignItems: 'center',
-    },
-    bannerImage: {
-      width: '100%',
-      height: '20%',
-      resizeMode: 'contain'
-    },
-    content: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      alignSelf: 'center'
-    },
-    mainText: {
-      fontSize: 20,
-      fontWeight: 'bold',
-      textAlign: 'center'
-    },
-    helpText: {
-      fontSize: 16,
-      textAlign: 'center',
-      marginTop: 10
+    
+    main_view : {
+      flexDirection : 'column',
+      alignItems : 'center',
+      padding : 10
+
     },
     hintText: {
       fontSize: 16,
-      textAlign: 'center',
-      marginTop: 15
+      textAlign: 'left',
+      marginTop: 15,
+      fontWeight : 'bold',
+      fontSize : 30
+    },
+    sub_view :{
+      textAlign : 'left',
+      fontSize : 20,
+      paddingTop : 10
+    },
+    image_icon : {
+      width : 50,
+      height : 50,
+
+    },
+    options : {
+      flexDirection : 'row',
+      padding : 20
+    },
+    button1: {
+      backgroundColor: "gold",
+      padding: 20,
+      borderRadius: 10
+    },
+    button2: {
+      backgroundColor: "white",
+      padding: 20,
+      borderRadius: 10,
+      
+    },
+    buttonText: {
+        color: "black"
     }
+  
   });
