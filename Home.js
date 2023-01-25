@@ -44,7 +44,7 @@ export default function Home ({navigation}) {
           </View>
           <View>
             
-              <TouchableOpacity style={styles.button1} onPress={() =>  navigation.navigate('Details')}>
+              <TouchableOpacity style={styles.button1} onPress={() =>  navigation.navigate('SeedPhase')}>
                 <Text style={styles.buttonText}>CREATE NEW WALLET</Text>
               </TouchableOpacity>
               <TouchableOpacity style={styles.button2}>
