@@ -17,7 +17,7 @@ export default function address ({navigation}) {
 
     return(
         <View>
-        <Text>HI</Text>
+        <Text>Address Generation page</Text>
             {/* <Text>{privatekey}</Text>
             <Text>{wallet}</Text> */}
         </View>
