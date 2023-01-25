@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View, Text, StatusBar, Image, SafeAreaViewComponent ,Button ,TouchableOpacity} from 'react-native';
 
-var ethers = require('ethers');  
-var crypto = require('crypto');
+// var ethers = require('ethers');  
+// var crypto = require('crypto');
 
 export default function address ({navigation}) {
     

@@ -48,7 +48,7 @@ function MyStack() {
     <Stack.Navigator>
       <Stack.Screen
         name="Home"     //changed home to Seedphase
-        component={Home}  //changed home to Seedphase
+        component={Address}  //changed home to Seedphase
         options={({navigation}) => ({
           headerTintColor: 'white',
           headerStyle: { backgroundColor: 'gold' },
