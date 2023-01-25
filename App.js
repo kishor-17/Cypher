@@ -37,6 +37,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './Home';
 import SeedPhase from './seedphase';
+import Address from './address';
 
 
 
@@ -56,6 +57,11 @@ function MyStack() {
       <Stack.Screen
         name="SeedPhase"
         component={SeedPhase}
+        
+      />
+      <Stack.Screen
+        name="Address"
+        component={Address}
         
       />
     </Stack.Navigator>

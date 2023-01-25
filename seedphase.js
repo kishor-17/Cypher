@@ -22,7 +22,7 @@ export default function seedPhase ({navigation}) {
 
             <View>
             
-              <TouchableOpacity style={styles.button1}>
+              <TouchableOpacity style={styles.button1} onPress={() =>  navigation.navigate('Address')}>
                 <Text style={styles.buttonText}>CONFIRM</Text>
               </TouchableOpacity>
               
